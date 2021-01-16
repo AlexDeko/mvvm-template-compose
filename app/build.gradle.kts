@@ -1,10 +1,10 @@
+import com.template.compose.Libraries
 import com.template.compose.Versions
 
 plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-android-extensions")
-    id("com.google.gms.google-services")
     id("kotlin-kapt")
 }
 
@@ -23,21 +23,18 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled  = true
+            isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
         getByName("debug") {
-            isMinifyEnabled  = false
+            isMinifyEnabled = false
         }
-    }
-
-    dataBinding {
-        isEnabled = true
     }
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.3.2")
+    implementation(Libraries.Kotlin.stdLib)
+    implementation(Libraries.AndroidX.coreKtx)
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("com.google.android.material:material:1.2.1")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")

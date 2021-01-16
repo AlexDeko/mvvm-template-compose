@@ -5,7 +5,7 @@ object Versions {
     const val compileSdk = 30
     const val minSdk = 21
 
-    const val gradle = "7.0.0-alpha04"
+    const val gradle = "3.4.3"
     const val gradleDoctor = "0.7.0"
     const val jacoco = "0.11.0"
     const val timeTracker = "0.11.0"
